@@ -1,0 +1,136 @@
+html { font-size: 20px; }  /* slightly larger */
+
+body {
+  margin: 0;
+  background: #faf9f7;
+  color: #1f1f1f;
+  font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont,
+               "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  line-height: 1.75;  /* more breathing room */
+  overflow: hidden; 
+}
+
+.page {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.75rem 3rem;
+  overflow: clip;
+  transform: translateY(-1.5vh);
+  min-height: 100svh;
+}
+
+
+
+.content {
+  max-width: 1250px;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 600px 1fr;  /* larger image column */
+  gap: 4.5rem;
+  align-items: start;
+  margin-top: 6vh;
+}
+
+.text {
+  max-width: 660px;       /* ideal readable width */
+}
+
+
+h1 {
+  font-size: 2.2rem;
+  font-weight: 600;
+  margin: 0 0 0.4rem 0;   /* tighter under name */
+  font-family: "Fraunces", serif;
+  font-weight: 650;
+  letter-spacing: 0.2px; /* keeps it crisp */
+}
+
+p {
+  margin: 0 0 1.8rem 0; /* was larger */
+}
+
+
+.links {
+  margin-top: 1.6rem;   /* was larger */
+}
+
+.portrait img {
+  width: 100%;
+  height: auto;
+  max-height: calc(100svh - 4rem); /* keeps no-scroll */
+  border-radius: 8px;
+  border: 1px solid rgba(0,0,0,0.06);
+  display: block;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.05);
+}
+
+
+.portrait img {
+  width: 100%;
+  max-height: calc(100svh - 4rem); /* keeps no-scroll */
+  border-radius: 8px;
+  display: block;
+  height: min(62vh, 520px);     /* consistent presence, adapts to height */
+  object-fit: cover;
+  object-position: center 22%;  /* bias slightly toward the face */
+  border-radius: 10px;
+  display: block;
+}
+
+.subhead {
+  margin: 0 0 2rem 0;
+  color: #666;
+  font-size: 0.95rem;
+  font-family: "Fraunces", serif;
+  font-weight: 560;
+  letter-spacing: 0.2px;       
+}
+
+.links {
+  margin-top: 2.2rem;
+  padding-top: 1.2rem;
+  border-top: 1px solid rgba(0,0,0,0.12);
+  font-size: 0.95rem;
+}
+
+a {
+  color: #2f5fa7;   /* muted blue */
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.divider {
+  margin: 0 0.6rem;
+  color: rgba(0,0,0,0.35); /* subtle */
+}
+
+
+.contact {
+  margin-top: 0.4rem;
+  font-size: 0.95rem;
+}
+
+.stamp {
+  margin-top: 1.8rem;
+  color: #777;
+  font-size: 0.85rem;
+}
+
+@media (max-height: 820px) {
+  .portrait img {
+    height: min(56vh, 460px);
+    object-position: center 34%;
+  }
+}
+
+}
+
+
+
+
+
+
