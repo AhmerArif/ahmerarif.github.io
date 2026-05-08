@@ -1,4 +1,4 @@
-html { font-size: 20px; }  /* slightly larger */
+html { font-size: 20px; }
 
 body {
   margin: 0;
@@ -6,8 +6,9 @@ body {
   color: #1f1f1f;
   font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont,
                "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-  line-height: 1.75;  /* more breathing room */
-  overflow: hidden; 
+  line-height: 1.75;
+  overflow-x: hidden;
+  overflow-y: auto;
 }
 
 .page {
@@ -15,67 +16,45 @@ body {
   align-items: center;
   justify-content: center;
   padding: 1.75rem 3rem;
-  overflow: clip;
-  transform: translateY(-1.5vh);
   min-height: 100svh;
 }
-
-
 
 .content {
   max-width: 1250px;
   width: 100%;
   display: grid;
-  grid-template-columns: 600px 1fr;  /* larger image column */
+  grid-template-columns: 600px 1fr;
   gap: 4.5rem;
   align-items: start;
   margin-top: 6vh;
 }
 
 .text {
-  max-width: 660px;       /* ideal readable width */
+  max-width: 660px;
 }
-
 
 h1 {
   font-size: 2.2rem;
-  font-weight: 600;
-  margin: 0 0 0.4rem 0;   /* tighter under name */
+  margin: 0 0 0.4rem 0;
   font-family: "Fraunces", serif;
   font-weight: 650;
-  letter-spacing: 0.2px; /* keeps it crisp */
+  letter-spacing: 0.2px;
 }
 
 p {
-  margin: 0 0 1.8rem 0; /* was larger */
-}
-
-
-.links {
-  margin-top: 1.6rem;   /* was larger */
+  margin: 0 0 1.8rem 0;
 }
 
 .portrait img {
   width: 100%;
-  height: auto;
-  max-height: calc(100svh - 4rem); /* keeps no-scroll */
-  border-radius: 8px;
+  height: min(62vh, 520px);
+  max-height: calc(100svh - 4rem);
+  object-fit: cover;
+  object-position: center 22%;
+  border-radius: 10px;
   border: 1px solid rgba(0,0,0,0.06);
   display: block;
   box-shadow: 0 6px 18px rgba(0,0,0,0.05);
-}
-
-
-.portrait img {
-  width: 100%;
-  max-height: calc(100svh - 4rem); /* keeps no-scroll */
-  border-radius: 8px;
-  display: block;
-  height: min(62vh, 520px);     /* consistent presence, adapts to height */
-  object-fit: cover;
-  object-position: center 22%;  /* bias slightly toward the face */
-  border-radius: 10px;
-  display: block;
 }
 
 .subhead {
@@ -84,7 +63,7 @@ p {
   font-size: 0.95rem;
   font-family: "Fraunces", serif;
   font-weight: 560;
-  letter-spacing: 0.2px;       
+  letter-spacing: 0.2px;
 }
 
 .links {
@@ -95,7 +74,7 @@ p {
 }
 
 a {
-  color: #2f5fa7;   /* muted blue */
+  color: #2f5fa7;
   text-decoration: none;
 }
 
@@ -105,13 +84,7 @@ a:hover {
 
 .divider {
   margin: 0 0.6rem;
-  color: rgba(0,0,0,0.35); /* subtle */
-}
-
-
-.contact {
-  margin-top: 0.4rem;
-  font-size: 0.95rem;
+  color: rgba(0,0,0,0.35);
 }
 
 .stamp {
@@ -127,10 +100,31 @@ a:hover {
   }
 }
 
+@media (max-width: 900px) {
+  html {
+    font-size: 18px;
+  }
+
+  .page {
+    display: block;
+    min-height: auto;
+    padding: 1.25rem;
+  }
+
+  .content {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    margin-top: 0;
+  }
+
+  .portrait img {
+    height: auto;
+    max-height: none;
+    object-fit: cover;
+  }
+
+  .links {
+    margin-top: 1.4rem;
+    padding-top: 0.8rem;
+  }
 }
-
-
-
-
-
-
